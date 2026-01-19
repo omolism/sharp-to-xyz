@@ -2,8 +2,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Unreal%20Engine-black?style=for-the-badge&logo=unrealengine&logoColor=white" alt="Unreal Engine">
-  <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.8+">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
+  <img src="https://img.shields.io/badge/Python-black?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/MIT-black?style=for-the-badge" alt="MIT License">
 </p>
 
 Convert [Apple SHARP](https://github.com/apple/ml-sharp) 3D Gaussian Splatting (3DGS) PLY files to standard XYZ point cloud format with RGB colors.
