@@ -177,6 +177,7 @@ The XYZ format is also compatible with:
 - [Apple SHARP](https://github.com/apple/ml-sharp) - Monocular 3D Gaussian Splatting model
 - [3D Gaussian Splatting](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) - Original research paper
 - [Unreal LiDAR Point Cloud Plugin](https://docs.unrealengine.com/5.0/en-US/lidar-point-cloud-plugin-in-unreal-engine/) - Official documentation
+- Example image from Gentle Monster × Mugler pop-up event
 
 ## License
 
