@@ -42,41 +42,9 @@ python sharp_to_xyz.py input.ply output.xyz
 
 ## Unreal Engine Integration
 
-### Prerequisites
-
-1. Unreal Engine 5.x
-2. LiDAR Point Cloud Plugin (built-in)
-
-### Step 1: Enable LiDAR Point Cloud Plugin
-
-1. Open your Unreal project
-2. Go to **Edit → Plugins**
-3. Search for **"LiDAR Point Cloud"**
-4. Check **Enabled**
-5. Restart the editor
-
-### Step 2: Import XYZ Point Cloud
-
-1. Drag your `.xyz` file into the **Content Browser**
-2. The import dialog will appear automatically
-3. Keep default settings and click **Import**
-4. A `ULidarPointCloud` asset is created with full RGB color support
-
-### Step 3: Add to Scene
-
-1. Drag the point cloud asset into your level
-2. Adjust transform as needed
-3. Configure rendering settings in Details panel:
-   - **Point Size**: Adjust for density
-   - **Rendering Mode**: Points, Sprites, or Meshes
-
-### Supported Import Settings
-
-| Setting | Recommended Value |
-|---------|-------------------|
-| Import Format | XYZ RGB |
-| Scale | 100 (cm to m conversion) |
-| Point Size | 1.0 - 5.0 |
+1. **Enable Plugin**: Edit → Plugins → search "LiDAR Point Cloud" → Enable → Restart
+2. **Import**: Drag `.xyz` file into Content Browser
+3. **Add to Scene**: Drag asset into level, adjust **Point Size** in Details panel
 
 ## Complete Workflow
 
