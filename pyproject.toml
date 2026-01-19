@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sharp-to-xyz"
+version = "1.0.0"
+description = "Convert Apple SHARP 3DGS PLY files to XYZ point cloud format"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "DanciShen", email = "dancishen@gmail.com"}
+]
+keywords = ["3dgs", "gaussian-splatting", "point-cloud", "ply", "xyz", "sharp", "apple"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+
+[project.scripts]
+sharp-to-xyz = "sharp_to_xyz:main"
+
+[project.urls]
+Homepage = "https://github.com/omolism/sharp-to-xyz"
+Repository = "https://github.com/omolism/sharp-to-xyz"
+Issues = "https://github.com/omolism/sharp-to-xyz/issues"
+
+[tool.setuptools]
+py-modules = ["sharp_to_xyz"]
