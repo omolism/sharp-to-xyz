@@ -16,31 +16,24 @@ Convert [Apple SHARP](https://github.com/apple/ml-sharp) 3D Gaussian Splatting (
 |:-----------:|:-------------------------:|
 | ![Input](images/input_original.jpg) | ![Output](images/output_unreal.png) |
 
-## Features
+## Quick Start
 
-- Convert SHARP 3DGS PLY files to ASCII XYZ format
-- Automatic spherical harmonics to RGB color conversion
-- Single file and batch directory processing
-- Zero dependencies (pure Python standard library)
-- Direct import into Unreal Engine LiDAR Point Cloud plugin
-
-## Installation
+### 1. Install
 
 ```bash
 git clone https://github.com/omolism/sharp-to-xyz.git
 cd sharp-to-xyz
 ```
 
-No additional dependencies required - uses only Python standard library.
+No dependencies required - uses only Python standard library.
 
-## Quick Start
+### 2. Convert PLY to XYZ
 
 ```bash
-# Convert PLY to XYZ
 python sharp_to_xyz.py input.ply output.xyz
 ```
 
-## Unreal Engine Integration
+### 3. Import to Unreal Engine
 
 1. **Enable Plugin**: Edit → Plugins → search "LiDAR Point Cloud" → Enable → Restart
 2. **Import**: Drag `.xyz` file into Content Browser
@@ -56,8 +49,6 @@ python sharp_to_xyz.py input.ply output.xyz
 └─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘
 ```
 
-### Full Pipeline Example
-
 ```bash
 # 1. Generate 3DGS with SHARP
 conda activate sharp
@@ -71,8 +62,6 @@ python sharp_to_xyz.py ./output/photo.ply ./output/photo.xyz
 ```
 
 ## Usage
-
-### Command Line
 
 ```bash
 # Convert single file
@@ -111,28 +100,6 @@ X Y Z R G B
 ...
 ```
 
-## Performance
-
-| Points | Conversion Time | Output Size |
-|--------|----------------|-------------|
-| 1.18M | ~10 seconds | ~80 MB |
-| 500K | ~4 seconds | ~34 MB |
-| 100K | ~1 second | ~7 MB |
-
-## How It Works
-
-SHARP stores colors as spherical harmonics (SH) coefficients. This tool extracts the DC component and converts to RGB:
-
-```python
-SH_C0 = 0.28209479177387814
-
-def sh_to_rgb(f_dc_0, f_dc_1, f_dc_2):
-    r = 0.5 + SH_C0 * f_dc_0
-    g = 0.5 + SH_C0 * f_dc_1
-    b = 0.5 + SH_C0 * f_dc_2
-    return clamp(r, g, b)
-```
-
 ## Other Applications
 
 The XYZ format is also compatible with:
@@ -150,18 +117,3 @@ The XYZ format is also compatible with:
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
-
-## Contributing
-
-Contributions welcome! Please open an issue or pull request.
-
-## Citation
-
-```bibtex
-@software{sharp_to_xyz,
-  title = {SHARP to XYZ Converter},
-  author = {DanciShen},
-  year = {2026},
-  url = {https://github.com/omolism/sharp-to-xyz}
-}
-```
