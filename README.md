@@ -8,7 +8,7 @@
 
 Convert [Apple SHARP](https://github.com/apple/ml-sharp) 3D Gaussian Splatting (3DGS) PLY files to standard XYZ point cloud format with RGB colors.
 
-**Perfect for importing AI-generated 3D content into Unreal Engine.**
+**Why?** Unreal Engine 5 doesn't natively support PLY files. While paid plugins exist on [Fab](https://www.fab.com/), this tool provides a free alternative by converting PLY to XYZ format, which the built-in LiDAR Point Cloud plugin can read directly.
 
 ## Example Results
 
