@@ -49,18 +49,6 @@ python sharp_to_xyz.py input.ply output.xyz
 └─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘
 ```
 
-```bash
-# 1. Generate 3DGS with SHARP
-conda activate sharp
-sharp predict -i photo.jpg -o ./output/
-
-# 2. Convert to XYZ
-python sharp_to_xyz.py ./output/photo.ply ./output/photo.xyz
-
-# 3. Import to Unreal Engine
-# Drag .xyz into Content Browser (LiDAR Point Cloud plugin required)
-```
-
 ## Usage
 
 ```bash
